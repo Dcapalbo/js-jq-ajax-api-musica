@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
- <head>
-  <meta charset="utf-8">
-  <title>js-jq-ajax-api-musica</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/lhandlebars.js/4.1.2/handlebars.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.jquery.min.js"></script>
-  <link href="https://fonts.googleapis.css?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
- </head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" charset="utf-8"></script>
+    <title>js-jq-ajax-api-musica</title>
+  </head>
  <body>
   <header>
+  <!-- header -->
    <div class="container">
     <img src="img/logo.png" alt="logo" />
    </div>
   </header>
-   <div class="cds-container container">
-    <!-- Disco ad esempio -->
+  <!-- end header -->
+  <!-- template handlebars -->
+  <div class="select-container container">
+   <select name="genre" id="genre">
+    <option value="all">All</option>
+    <option value="pop">Pop</option>
+    <option value="rock">Rock</option>
+    <option value="metal">Metal</option>
+    <option value="jazz">Jazz</option>
+   </select>
+  </div>
+  <div class="cds-container container">
+    <!-- Music cds -->
+   <script id="entry-template" type="text/x-handlebars-template">
     <div class="cd">
-     <img src="https://upload.wikimedia.org/wikipedia/eTen_Summoner%27s_Tales.jpg" alt="">
-     <h3>Ten's Summoners Tales</h3>
-     <span class="author">Sting</span>
-     <span class="year">1993</span>
-    </div>
-   </div>
+		 <img src="{{poster}}" alt="poster img">
+		 <h3>{{title}}</h3>
+		 <span class="author">{{author}}</span>
+		 <span class="year">{{year}}</span>
+	  </div>
+	 </script>
+  </div>
+  <!-- end template handlebars -->
   <script src="js/main.js" charset="utf-8"></script>
  </body>
 </html>
