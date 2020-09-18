@@ -21,7 +21,7 @@
   <!-- template handlebars -->
   <div class="select-container container">
    <select name="genre" id="genre">
-    <option value="all">All</option>
+    <option value="">All</option>
     <option value="pop">Pop</option>
     <option value="rock">Rock</option>
     <option value="metal">Metal</option>
@@ -31,8 +31,8 @@
   <div class="cds-container container">
     <!-- Music cds -->
    <script id="entry-template" type="text/x-handlebars-template">
-    <div class="cd">
-		 <img src="{{poster}}" alt="poster img">
+    <div class="cd" data-genre="{{genre}}">
+		 <img src="{{poster}}" alt="">
 		 <h3>{{title}}</h3>
 		 <span class="author">{{author}}</span>
 		 <span class="year">{{year}}</span>
