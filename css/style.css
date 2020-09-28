@@ -67,3 +67,8 @@ font-size: 20px;
 
 .cd span.year {
 color: grey;
+}
+
+.pop {
+  display: block
+}

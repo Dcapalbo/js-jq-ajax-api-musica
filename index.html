@@ -22,15 +22,15 @@
   <div class="select-container container">
    <select name="genre" id="genre">
     <option value="">All</option>
-    <option value="pop">Pop</option>
-    <option value="rock">Rock</option>
-    <option value="metal">Metal</option>
-    <option value="jazz">Jazz</option>
+    <option value="Pop">Pop</option>
+    <option value="Rock">Rock</option>
+    <option value="Metal">Metal</option>
+    <option value="Jazz">Jazz</option>
    </select>
   </div>
   <div class="cds-container container">
     <!-- Music cds -->
-   <script id="entry-template" type="text/x-handlebars-template">
+   <script id="music-template" type="text/x-handlebars-template">
     <div class="cd" data-genre="{{genre}}">
 		 <img src="{{poster}}" alt="">
 		 <h3>{{title}}</h3>
